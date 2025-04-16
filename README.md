@@ -1,8 +1,8 @@
-🥔 Potato Freshness Detection Using CNN & Flask
-This project is a deep learning-based web application that detects the freshness level of potatoes from images. The system is built using a Convolutional Neural Network (CNN) model trained on a dataset of fresh and rotten potato images, and deployed using a Flask web server.
+🥔 Fruits and Vegetables Freshness Detection Using CNN & Flask
+This project is a deep learning-based web application that detects the freshness level of Fruits and Vegetables from images. The system is built using a Convolutional Neural Network (CNN) model trained on a dataset of fresh and rotten Fruits and Vegetables images, and deployed using a Flask web server.
 
 🚀 Features
-Trained CNN model for image classification (fresh vs rotten potatoes)
+Trained CNN model for image classification (fresh vs rotten Fruits and Vegetables)
 
 User-friendly web interface for uploading images
 
