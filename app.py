@@ -6,7 +6,6 @@ import torch.nn.functional as F
 from PIL import Image
 import os
 
-# Define the CNN model
 class FreshnessCNN(nn.Module):
     def __init__(self, num_classes=20):
         super(FreshnessCNN, self).__init__()
@@ -28,15 +27,14 @@ class FreshnessCNN(nn.Module):
         x = self.fc2(x)
         return x
 
-# Initialize Flask app
 app = Flask(__name__)
 
-# Load the model
+
 model = FreshnessCNN(num_classes=20)
 model.load_state_dict(torch.load('freshness_cnn.pth', map_location=torch.device('cpu')))
 model.eval()
 
-# Define the class names used during training
+
 model.classes = [
     'Apple_Fresh', 'Apple_Stale', 'Apple_Rotten',
     'Potato_Fresh', 'Potato_Stale', 'Potato_Rotten',
@@ -47,7 +45,6 @@ model.classes = [
     'Cabbage_Fresh', 'Cabbage_Stale'
 ]
 
-# Define image transformation
 transform = transforms.Compose([
     transforms.Resize((128, 128)),
     transforms.ToTensor(),
